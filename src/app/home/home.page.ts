@@ -24,7 +24,7 @@ export class HomePage {
   suppe = {
     name : 'gemuese suppe',
     id : '1',
-    ingredients: ['Kartoffel' , 'Paprika', 'Zuchini', 'Brokkoli'],
+    ingredients: ['Kartoffel' , 'Paprika', 'Zuchini', 'Brokkoli', 'Zwiebel', 'Salz', 'Pfeffer'],
     instructions: 'yap, et, halllet, tuzla muzla cuzla. iyice yika filan flan yap.yap, et, halllet, tuzla muzla cuzla. iyice yika filan flan yap.yap, et, halllet, tuzla muzla cuzla. iyice yika filan flan yap.yap, et, halllet, tuzla muzla cuzla. iyice yika filan flan yap.yap, et, halllet, tuzla muzla cuzla. iyice yika filan flan yap.yap, et, halllet, tuzla muzla cuzla. iyice yika filan flan yap.'
   }
 
@@ -34,7 +34,8 @@ export class HomePage {
     let navigationExtras: NavigationExtras = {
       queryParams: {
         // special: 'whateverrrr'
-        special: JSON.stringify(this.user)
+        // special: JSON.stringify(this.user)
+        special: JSON.stringify(this.suppe)
       }
     }
 
@@ -53,7 +54,7 @@ export class HomePage {
   getfood() {
 
   }
-  
+
 
   openDetailsWithService() {
 
