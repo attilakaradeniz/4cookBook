@@ -42,6 +42,19 @@ export class HomePage {
 
   }
 
+
+
+
+  addfood() {
+
+  }
+
+
+  getfood() {
+
+  }
+  
+
   openDetailsWithService() {
 
   }
