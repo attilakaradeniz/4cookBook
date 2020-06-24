@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router, NavigationExtras } from '@angular/router';
+import { Storage } from '@ionic/storage';
 
 @Component({
   selector: 'app-home',
@@ -27,7 +28,7 @@ export class HomePage {
     instructions: 'yap, et, halllet, tuzla muzla cuzla. iyice yika filan flan yap.yap, et, halllet, tuzla muzla cuzla. iyice yika filan flan yap.yap, et, halllet, tuzla muzla cuzla. iyice yika filan flan yap.yap, et, halllet, tuzla muzla cuzla. iyice yika filan flan yap.yap, et, halllet, tuzla muzla cuzla. iyice yika filan flan yap.yap, et, halllet, tuzla muzla cuzla. iyice yika filan flan yap.'
   }
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, private storage: Storage) {}
 
   openDetailsWithQueryParams() {
     let navigationExtras: NavigationExtras = {
@@ -47,6 +48,12 @@ export class HomePage {
 
   openDetailsWithState() {
 
+  }
+
+
+
+  setStorage() {
+    this.storage.set('name', 'suppe');
   }
 
 }
