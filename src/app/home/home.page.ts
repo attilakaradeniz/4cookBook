@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router, NavigationExtras } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -7,6 +8,45 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  user = {
+    name: 'Simon Grimm',
+    website: 'www.ionicacademy.com',
+    address: {
+      zip: 48149,
+      city: 'Muenster',
+      country: 'DE'
+    },
+    interests: ['Ionic', 'Angular', 'YouTube', 'Sports'
+   ]
+  };
+
+  suppe = {
+    name : 'gemuese suppe',
+    id : '1',
+    ingredients: ['Kartoffel' , 'Paprika', 'Zuchini', 'Brokkoli'],
+    instructions: 'yap, et, halllet, tuzla muzla cuzla. iyice yika filan flan yap.yap, et, halllet, tuzla muzla cuzla. iyice yika filan flan yap.yap, et, halllet, tuzla muzla cuzla. iyice yika filan flan yap.yap, et, halllet, tuzla muzla cuzla. iyice yika filan flan yap.yap, et, halllet, tuzla muzla cuzla. iyice yika filan flan yap.yap, et, halllet, tuzla muzla cuzla. iyice yika filan flan yap.'
+  }
+
+  constructor(private router: Router) {}
+
+  openDetailsWithQueryParams() {
+    let navigationExtras: NavigationExtras = {
+      queryParams: {
+        // special: 'whateverrrr'
+        special: JSON.stringify(this.user)
+      }
+    }
+
+    this.router.navigate(['details'], navigationExtras); 
+
+  }
+
+  openDetailsWithService() {
+
+  }
+
+  openDetailsWithState() {
+
+  }
 
 }
