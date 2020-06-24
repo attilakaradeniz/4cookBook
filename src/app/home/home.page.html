@@ -1,7 +1,9 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
+      
       4cookBook
+      <ion-icon name="pizza-outline"></ion-icon>
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -16,16 +18,18 @@
   <!-- <app-explore-container name="Tab 1 page"></app-explore-container> -->
 
 
-  <ion-button expand="full" (click)="openDetailsWithQueryParams()">
-    Open with Query Params
+  <ion-button expand="full" (click)="openDetailsWithQueryParams()" color="danger">
+    <ion-icon name="pizza-outline"></ion-icon>
+    Let's eat
+
   </ion-button>   
 
-  <ion-button expand="full" (click)="openDetailsWithService()">
+  <!-- <ion-button  expand="full" (click)="openDetailsWithService()">
     Open with Service
   </ion-button>   
 
   <ion-button expand="full" (click)="openDetailsWithState()">
     Open with State
-  </ion-button>   
+  </ion-button>    -->
 
 </ion-content>
