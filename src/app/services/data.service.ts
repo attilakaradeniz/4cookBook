@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Storage } from '@ionic/storage';
-import { threadId } from 'worker_threads';
+
 
 
 //
@@ -9,7 +9,8 @@ export interface Item {
   id: number,
   name: string,
   ingredients: string,
-  intructions: string
+  //ingredients: [],
+  instructions: string
 }
 
 const ITEMS_KEY = 'food-item';
@@ -18,10 +19,9 @@ const ITEMS_KEY = 'food-item';
 @Injectable({
   providedIn: 'root'
 })
-export class DataService {
+export class DataService { 
 
-  // constructor(private storage: Storage) { }
-  constructor(private storage: Storage) { }
+   constructor(private storage: Storage) { }
   
   // create
   addItem(item: Item): Promise<any> {
@@ -37,8 +37,8 @@ export class DataService {
   }
   
   // read
-  getItem() {
-
+  getItems(): Promise<Item[]> {
+      return this.storage.get(ITEMS_KEY);
   }
 
   // update

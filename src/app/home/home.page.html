@@ -26,27 +26,33 @@
   <ion-item>
     <ion-label position="fixed">Food</ion-label>
     <!-- <ion-input [(ngModel)]="newItem.title"></ion-input> -->
-    <ion-input placeholder="feed me!"></ion-input>
+    <!-- <ion-input placeholder="feed me!" [(ngModel)]="newItem.name"></ion-input> -->
+    <!-- <ion-input placeholder="feed me!" [(ngModel)]="newItem.name"></ion-input> --> 
+    <ion-input placeholder="feed me!" [(ngModel)]="fName"></ion-input>
   </ion-item>
 
   <ion-item>
     <ion-label position="fixed">Ingredients</ion-label>
     <!-- <ion-input [(ngModel)]="newItem.value"></ion-input> -->
-    <ion-input placeholder="count now"></ion-input>
+    <!-- <ion-input [(ngModel)]="newItem."></ion-input> -->
+    <!-- <ion-input placeholder="count now" [(ngModel)]="newItem.ingredients"></ion-input> -->
+    <ion-input placeholder="count now" [(ngModel)]="fIngredients"></ion-input>
   </ion-item>
-  <div expand="full"> . . . ingredients comma seperated please</div>
+  <!-- <div expand="full"> . . . ingredients comma seperated please</div> -->
 
   <ion-item>
     <ion-label position="fixed">Intructions</ion-label>
     <!-- <ion-input [(ngModel)]="newItem.value"></ion-input> -->
-    <ion-input placeholder="Tell me how"></ion-input>
+    <!-- <ion-input placeholder="Tell me how" [(ngModel)]="newItem.instructions"></ion-input> -->
+    <ion-input placeholder="Tell me how" [(ngModel)]="fInstructions"></ion-input>
     
   </ion-item>
 
 
 
-  <ion-button expand="full" color="warning">Add Item!</ion-button>
+  <!-- <ion-button expand="full" color="warning" (click)="addItem()">Add Item!</ion-button> -->
   <!-- <ion-button expand="full" (click)="addItem()" color="warning">Add Item!</ion-button> -->
+  <ion-button expand="full" color="warning" (click)="getFood()">Add Item!</ion-button>
 
 
 

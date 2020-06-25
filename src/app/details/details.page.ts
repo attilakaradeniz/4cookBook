@@ -17,6 +17,7 @@ export class DetailsPage implements OnInit {
       if (params && params.special) {
         // this.data = params.special;
         this.data = JSON.parse(params.special);
+        //this.data = params.special;
       }
     });
   }
